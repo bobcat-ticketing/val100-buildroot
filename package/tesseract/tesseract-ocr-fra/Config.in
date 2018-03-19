@@ -1,0 +1,5 @@
+config BR2_PACKAGE_TESSERACT_OCR_FRA
+	bool "French language support"
+	depends on BR2_PACKAGE_TESSERACT
+	help
+	  This will install the french training data file for tesseract

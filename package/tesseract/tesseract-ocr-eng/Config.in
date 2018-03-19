@@ -1,0 +1,5 @@
+config BR2_PACKAGE_TESSERACT_OCR_ENG
+	bool "English language support"
+	depends on BR2_PACKAGE_TESSERACT
+	help
+	  This will install the english training data file for tesseract

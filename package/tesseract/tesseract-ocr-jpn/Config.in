@@ -1,0 +1,5 @@
+config BR2_PACKAGE_TESSERACT_OCR_JPN
+	bool "Japanese language support"
+	depends on BR2_PACKAGE_TESSERACT
+	help
+	  This will install the japanese training data file for tesseract

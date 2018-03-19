@@ -1,0 +1,6 @@
+config BR2_PACKAGE_TESSERACT_OCR_KOR
+	bool "Korean language support"
+	depends on BR2_PACKAGE_TESSERACT
+	help
+	  This will install the korean language training data file
+	  for tesseract

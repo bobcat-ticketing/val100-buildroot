@@ -1,0 +1,6 @@
+config BR2_PACKAGE_TESSERACT_OCR_CHI_SIM
+	bool "Simplified Chinese language support"
+	depends on BR2_PACKAGE_TESSERACT
+	help
+	  This will install the simplified chinese training data file
+	  for tesseract

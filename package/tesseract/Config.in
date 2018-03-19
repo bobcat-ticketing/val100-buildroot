@@ -1,0 +1,2 @@
+# Tesseract engine & language training data
+source "package/tesseract/tesseract/Config.in"

@@ -1,0 +1,5 @@
+config BR2_PACKAGE_TESSERACT_OCR_SPA
+	bool "Spanish language support"
+	depends on BR2_PACKAGE_TESSERACT
+	help
+	  This will install the spanish training data file for tesseract

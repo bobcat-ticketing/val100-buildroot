@@ -1,0 +1,11 @@
+config BR2_PACKAGE_QT5TOOLS
+	bool "qt5tools"
+	select BR2_PACKAGE_QT5BASE
+	help
+	  Qt is a cross-platform application and UI framework for
+	  developers using C++.
+
+	  This package corresponds to qttools and builds QtHelp and QtUiTools 
+	  for the target and Linguist's command line tools for the host.
+
+	  http://qt-project.org

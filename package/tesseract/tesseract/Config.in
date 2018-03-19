@@ -1,0 +1,49 @@
+config BR2_PACKAGE_TESSERACT
+	bool "tesseract"
+	depends on BR2_INSTALL_LIBSTDCPP
+	select BR2_PACKAGE_LEPTONICA
+	select BR2_PACKAGE_TESSERACT_OCR_ENG
+	help
+	  Tesseract is an OCR (Optical Character Recognition) engine,
+	  It can be used directly, or (for programmers) using an API.
+	  It supports a wide variety of languages.
+
+	  http://code.google.com/p/tesseract-ocr/
+
+comment "tesseract needs a toolchain with C++ support"
+	depends on !BR2_INSTALL_LIBSTDCPP
+
+
+if BR2_PACKAGE_TESSERACT
+	menu "tesseract image file format support"
+
+	config BR2_PACKAGE_TESSERACT_JPEG
+		bool "enable JPEG file format support"
+		select BR2_PACKAGE_JPEG
+		default y
+
+	config BR2_PACKAGE_TESSERACT_PNG
+		bool "enable PNG file format support"
+		select BR2_PACKAGE_LIBPNG
+		default y
+
+	config BR2_PACKAGE_TESSERACT_TIFF
+		bool "enable TIFF file format support"
+		select BR2_PACKAGE_TIFF
+
+	endmenu
+
+	menu "tesseract language support"
+		source "package/tesseract/tesseract-ocr-eng/Config.in"
+		source "package/tesseract/tesseract-ocr-fra/Config.in"
+		source "package/tesseract/tesseract-ocr-spa/Config.in"
+		source "package/tesseract/tesseract-ocr-deu/Config.in"
+		source "package/tesseract/tesseract-ocr-chi-sim/Config.in"
+		source "package/tesseract/tesseract-ocr-chi-tra/Config.in"
+		source "package/tesseract/tesseract-ocr-jpn/Config.in"
+		source "package/tesseract/tesseract-ocr-rus/Config.in"
+		source "package/tesseract/tesseract-ocr-nld/Config.in"
+		source "package/tesseract/tesseract-ocr-hin/Config.in"
+		source "package/tesseract/tesseract-ocr-kor/Config.in"
+	endmenu
+endif

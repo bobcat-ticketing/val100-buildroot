@@ -48,4 +48,10 @@ define I2C_TOOLS_INSTALL_TARGET_CMDS
 	$(I2C_TOOLS_INSTALL_PYSMBUS)
 endef
 
+I2C_TOOLS_INSTALL_STAGING = YES
+define I2C_TOOLS_INSTALL_STAGING_CMDS
+ $(INSTALL) -D -m644 $(@D)/include/linux/i2c-dev.h $(STAGING_DIR)/usr/in
+endef
+
+
 $(eval $(generic-package))

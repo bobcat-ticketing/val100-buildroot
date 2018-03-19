@@ -1,0 +1,5 @@
+config BR2_PACKAGE_TESSERACT_OCR_HIN
+	bool "Hindi language support"
+	depends on BR2_PACKAGE_TESSERACT
+	help
+	  This will install the hindi language training data file for tesseract

@@ -1,0 +1,5 @@
+config BR2_PACKAGE_TESSERACT_OCR_NLD
+	bool "Dutch language support"
+	depends on BR2_PACKAGE_TESSERACT
+	help
+	  This installs the dutch language training data file for tesseract

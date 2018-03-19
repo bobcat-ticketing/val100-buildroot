@@ -1,0 +1,6 @@
+config BR2_PACKAGE_TESSERACT_OCR_RUS
+	bool "Russian language support"
+	depends on BR2_PACKAGE_TESSERACT
+	help
+	  This will install the russian language training data file
+	  for tesseract
